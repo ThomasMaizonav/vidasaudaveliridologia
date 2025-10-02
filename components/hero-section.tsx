@@ -67,7 +67,7 @@ export function HeroSection() {
                 <Clock className="w-6 h-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Horário</p>
-                  <p className="text-elderly-base font-semibold">Seg-Sex 8h-18h</p>
+                  <p className="text-elderly-base font-semibold">Seg-Sex 8h-17:30h</p>
                 </div>
               </div>
             </div>
