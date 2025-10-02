@@ -5,9 +5,11 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Vida Saudável Iridologia',
+  description: 'Clínica de iridologia e saúde natural',
+  icons: {
+    icon: 'public/images/design-mode/img3.jpeg', // caminho dentro da pasta public
+  },
 }
 
 export default function RootLayout({
