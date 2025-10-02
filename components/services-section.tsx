@@ -171,7 +171,7 @@ export function ServicesSection() {
                 1
               </div>
               <h4 className="font-semibold text-elderly-lg mb-2">Agendamento</h4>
-              <p className="text-muted-foreground text-pretty">Ligue para (67) 3422-0697 e agende sua consulta</p>
+              <p className="text-muted-foreground text-pretty">Ligue para (67) 99982-4950 e agende sua consulta</p>
             </div>
 
             <div className="text-center">
@@ -218,7 +218,7 @@ export function ServicesSection() {
                   onClick={() => window.open("tel:+5567999824950", "_self")}
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Ligar Agora: (67) 3422-0697
+                  Ligar Agora: (67) 99982-4950
                 </Button>
                 <Button
                   size="lg"

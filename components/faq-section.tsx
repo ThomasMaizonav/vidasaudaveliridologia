@@ -45,7 +45,7 @@ export function FAQSection() {
     {
       question: "Qual o valor da consulta?",
       answer:
-        "Os valores variam conforme o tipo de consulta escolhida. Entre em contato conosco pelo telefone (67) 3422-0697 para informações detalhadas sobre preços e formas de pagamento. Oferecemos condições especiais para idosos.",
+        "Os valores variam conforme o tipo de consulta escolhida. Entre em contato conosco pelo telefone (67) 99982 4950 para informações detalhadas sobre preços e formas de pagamento. Oferecemos condições especiais para idosos.",
     },
   ]
 
@@ -107,7 +107,7 @@ export function FAQSection() {
                 onClick={() => window.open("https://wa.me/5567999824950", "_blank")}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Enviar Mensagem: (67) 3422-0697
+                Enviar Mensagem: (67) 99982 4950
               </Button>
             </CardContent>
           </Card>

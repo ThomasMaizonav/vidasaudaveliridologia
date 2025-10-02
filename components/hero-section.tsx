@@ -51,7 +51,7 @@ export function HeroSection() {
                 <Phone className="w-6 h-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Telefone</p>
-                  <p className="text-elderly-base font-semibold">(67) 3422-0697</p>
+                  <p className="text-elderly-base font-semibold">(67) 99982-4950</p>
                 </div>
               </div>
 

@@ -101,7 +101,7 @@ export function Footer() {
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-elderly-base font-medium">(67) 3422-0697</p>
+                    <p className="text-elderly-base font-medium">(67) 99982 4950</p>
                     <p className="text-sm text-primary-foreground/70">Segunda a Sexta</p>
                   </div>
                 </div>
