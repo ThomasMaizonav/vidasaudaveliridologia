@@ -83,7 +83,8 @@ className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-
                   alt="Iridologia - Análise da íris dos olhos"
                   width={500}
                   height={600}
-                  className="w-full h-auto max-h-[380px] md:max-h-none rounded-2xl object-contain mx-auto"
+                    className="w-full h-auto rounded-2xl object-cover" // <- cover corta
+
                   priority
                 />
 
