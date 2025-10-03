@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/10"
+className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-background md:bg-gradient-to-br from-primary/5 to-secondary/5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -83,7 +83,7 @@ export function HeroSection() {
                   alt="Iridologia - Análise da íris dos olhos"
                   width={500}
                   height={600}
-                  className="w-full h-auto rounded-2xl object-cover"
+                  className="w-full h-auto max-h-[380px] md:max-h-none rounded-2xl object-contain mx-auto"
                   priority
                 />
 
@@ -94,7 +94,8 @@ export function HeroSection() {
                   alt="Mapas de Microsemiótica Oftálmica - Íris Direita e Esquerda"
                   width={600}
                   height={300}
-                  className="w-full h-auto rounded-xl object-cover"
+                  className="w-full h-auto max-h-[300px] md:max-h-none rounded-xl object-cover"
+
                 />
                 <p className="text-center text-sm text-muted-foreground mt-3">
                   Mapas da íris mostrando as correspondências dos órgãos
