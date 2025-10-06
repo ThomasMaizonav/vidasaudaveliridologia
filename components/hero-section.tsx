@@ -8,7 +8,12 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-background md:bg-gradient-to-br from-primary/5 to-secondary/5"
+      className="
+        relative overflow-hidden
+        min-h-0 md:min-h-screen
+        flex items-center justify-center
+        bg-background md:bg-gradient-to-br from-primary/5 to-secondary/5
+      "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -20,7 +25,7 @@ className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-
               Conheça os Benefícios
             </h1>
 
-            <p className="text-elderly-lg text-muted-foreground mb-8 max-w-2xl text-pretty">
+            <p className="text-elderly-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 text-pretty">
               Descubra o que seus olhos podem revelar sobre sua saúde. A iridologia é uma técnica natural que analisa a
               íris para identificar desequilíbrios no organismo.
             </p>
@@ -73,30 +78,34 @@ className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-
             </div>
           </div>
 
-          {/* Image */}
+          {/* Images / Right column */}
           <div className="relative">
-            <div className="relative w-full max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-6"></div>
+            <div className="relative w-full max-w-md sm:max-w-lg mx-auto overflow-hidden">
+              {/* shape de fundo — fica atrás e não causa overflow */}
+              <div className="pointer-events-none absolute -inset-6 sm:-inset-8 -z-10 rotate-6 rounded-3xl bg-gradient-to-r from-primary to-secondary" />
+
+              {/* Card principal */}
               <div className="relative bg-white rounded-3xl p-2 shadow-2xl">
                 <Image
                   src="/images/design-mode/img3%281%29.jpeg"
                   alt="Iridologia - Análise da íris dos olhos"
                   width={500}
                   height={600}
-                    className="w-full h-auto rounded-2xl object-cover" // <- cover corta
-
+                  className="w-full h-auto rounded-2xl object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
-
               </div>
-              <div className="relative bg-white rounded-2xl p-3 shadow-xl">
+
+              {/* Card secundário */}
+              <div className="relative bg-white rounded-2xl p-3 shadow-xl mt-6">
                 <Image
                   src="/images/design-mode/image.png"
                   alt="Mapas de Microsemiótica Oftálmica - Íris Direita e Esquerda"
                   width={600}
                   height={300}
                   className="w-full h-auto max-h-[300px] md:max-h-none rounded-xl object-cover"
-
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <p className="text-center text-sm text-muted-foreground mt-3">
                   Mapas da íris mostrando as correspondências dos órgãos
@@ -104,6 +113,7 @@ className="relative min-h-0 md:min-h-screen flex items-center justify-center bg-
               </div>
             </div>
           </div>
+          {/* /Right column */}
         </div>
       </div>
     </section>
