@@ -70,7 +70,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="servicos" className="py-20 bg-background">
+    <section id="servicos" className="py-20 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -97,32 +97,34 @@ export function ServicesSection() {
                 }`}
               >
                 {service.featured && (
-                  <Badge className="absolute top-4 right-4 bg-secondary text-secondary-foreground">
+                  <Badge className="absolute top-3 right-3 z-10 pointer-events-none bg-secondary text-secondary-foreground">
                     Mais Procurado
                   </Badge>
                 )}
 
-                <CardHeader className="pb-4">
-                  <div className="flex items-start space-x-4">
+                <CardHeader className={`pb-4 ${service.featured ? "pt-10" : ""}`}>
+                  <div className="flex items-start gap-4">
                     <div
-                      className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 ${
                         service.featured ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"
                       }`}
                     >
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-elderly-xl mb-1">{service.title}</CardTitle>
+                    <div className="flex-1 min-w-0">
+                      <CardTitle className="text-elderly-xl mb-1 break-words">{service.title}</CardTitle>
                       <p className="text-sm text-primary font-medium">{service.subtitle}</p>
                     </div>
                   </div>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
-                  <p className="text-elderly-base text-muted-foreground text-pretty">{service.description}</p>
+                  <p className="text-elderly-base text-muted-foreground text-pretty break-words">
+                    {service.description}
+                  </p>
 
-                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                    <Clock className="w-4 h-4" />
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4 shrink-0" />
                     <span>Duração: {service.duration}</span>
                   </div>
 
@@ -131,8 +133,8 @@ export function ServicesSection() {
                     <h4 className="font-semibold text-elderly-base mb-3">Benefícios:</h4>
                     <div className="grid grid-cols-1 gap-2">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                        <div key={benefitIndex} className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary shrink-0" />
                           <span className="text-sm text-muted-foreground">{benefit}</span>
                         </div>
                       ))}
