@@ -145,3 +145,16 @@
     line-height: 1.5;
   }
 }
+
+/* Evita scroll horizontal no mobile */
+html, body, #__next {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Garante que mídias não “estourem” a largura */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
