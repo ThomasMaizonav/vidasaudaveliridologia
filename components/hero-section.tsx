@@ -80,9 +80,10 @@ export function HeroSection() {
 
           {/* Images / Right column */}
           <div className="relative">
-            <div className="relative w-full max-w-md sm:max-w-lg mx-auto overflow-hidden">
-              {/* shape de fundo — fica atrás e não causa overflow */}
-              <div className="pointer-events-none absolute -inset-6 sm:-inset-8 -z-10 rotate-6 rounded-3xl bg-gradient-to-r from-primary to-secondary" />
+            {/* 👉 NÃO usar overflow-hidden aqui, pra não matar o shape */}
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* shape azul original, atrás das imagens */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-6"></div>
 
               {/* Card principal */}
               <div className="relative bg-white rounded-3xl p-2 shadow-2xl">
